@@ -10,24 +10,22 @@ import { HEROES } from '../mock-heroes'; // sostituisce temporaneamente un datab
 })
 
 // first implementation
-export class HeroesComponent implements OnInit {
-
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  }
-
-  constructor() { }
-
-  ngOnInit() { }
-
-}
-
 // export class HeroesComponent implements OnInit {
 //
-//   heroes = HEROES;
+//   hero: Hero = {
+//     id: 1,
+//     name: 'Windstorm'
+//   }
 //
 //   constructor() { }
 //
 //   ngOnInit() { }
+//
 // }
+
+export class HeroesComponent implements OnInit {
+
+  heroes = HEROES;
+
+  ngOnInit() { }
+}
