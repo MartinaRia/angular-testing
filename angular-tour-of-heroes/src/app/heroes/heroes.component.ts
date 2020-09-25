@@ -23,7 +23,7 @@ import { HEROES } from '../mock-heroes'; // sostituisce temporaneamente un datab
 //
 // }
 
-export class HeroesComponent implements OnInit {
+export class HeroesComponent implements OnInit { //implements OnInit è superfluo, se lo si elimina e si elimina anche constructor e ngOnInit la classe funziona ugualmente
 
   heroes = HEROES;
   selectedHero: Hero;
@@ -31,7 +31,7 @@ export class HeroesComponent implements OnInit {
   constructor() { }
   ngOnInit() { }
 
-  onSelect(hero: Hero): void {
+  onSelect(hero: Hero): void { //You may commonly see :void as the return type of functions that do not return a value
     this.selectedHero = hero;
   }
 }

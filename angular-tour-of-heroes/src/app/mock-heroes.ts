@@ -1,5 +1,6 @@
 import { Hero } from './hero';
 
+// const: interface ovvero istanza const della classe interface
 export const HEROES: Hero[] = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
