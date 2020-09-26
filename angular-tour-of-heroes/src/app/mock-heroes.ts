@@ -1,6 +1,6 @@
-import { Hero } from './hero';
+import { Hero } from './hero'; //importa l'interface
 
-// const: interface ovvero istanza const della classe interface
+// dichiarazione che HEROES è un constructor ed è di tipo :Hero e costruisce Hero
 export const HEROES: Hero[] = [
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
