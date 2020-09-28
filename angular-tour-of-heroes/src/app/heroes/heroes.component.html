@@ -19,8 +19,15 @@
       <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
         <span class="badge">{{hero.id}}</span> <span>{{hero.name}}</span>
       </li>
+
+      <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
+      <li *ngIf="newhero">
+        <span class="badge">{{newhero.id}}</span> <span>{{newhero.name}}</span>
+      </li>
+      <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
     </ul>
 
-    <app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+    <app-hero-detail [hero]="selectedHero" (newItemEvent)="addItem($event)"></app-hero-detail>
 
 </div>

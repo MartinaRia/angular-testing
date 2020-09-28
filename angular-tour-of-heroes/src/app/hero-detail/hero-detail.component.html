@@ -4,9 +4,18 @@
     <span>id:</span>
     <span>{{hero.id}}</span>
   </div>
-  <div>
+  <div> <!-- modifica nome -->
     <label>name:
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
+
+  <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
+  <div>
+    <label>Add an item:
+      <input #newItem>
+    </label>
+    <button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+  </div>
+  <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
 </div>

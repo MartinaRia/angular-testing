@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Hero } from '../hero';
 
 @Component({
@@ -10,9 +10,14 @@ export class HeroDetailComponent implements OnInit {
 
   @Input() hero: Hero;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  // CUSTOM CODE FOR OUTPUT TEST ------
+  @Output() newItemEvent = new EventEmitter<string>();
+  addNewItem(value: string) {
+    this.newItemEvent.emit(value);
   }
+  // CUSTOM CODE FOR OUTPUT TEST ------
+
+  constructor() { }
+  ngOnInit(): void { }
 
 }

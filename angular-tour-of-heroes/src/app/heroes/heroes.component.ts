@@ -9,29 +9,28 @@ import { HEROES } from '../mock-heroes'; // sostituisce temporaneamente un datab
   styleUrls: ['./heroes.component.scss']
 })
 
-// first implementation
-// export class HeroesComponent implements OnInit {
-//
-//   hero: Hero = {
-//     id: 1,
-//     name: 'Windstorm'
-//   }
-//
-//   constructor() { }
-//
-//   ngOnInit() { }
-//
-// }
-
 export class HeroesComponent implements OnInit { //implements OnInit è superfluo, se lo si elimina e si elimina anche constructor e ngOnInit la classe funziona ugualmente
 
   heroes = HEROES;
   selectedHero: Hero;
 
-  constructor() { }
-  ngOnInit() { }
-
   onSelect(hero: Hero): void { //You may commonly see :void as the return type of functions that do not return a value
     this.selectedHero = hero;
   }
-}
+
+  // CUSTOM CODE FOR OUTPUT TEST ------
+  newhero: Hero;
+  addItem(newItem: string) {
+    for (const hero of this.heroes) {
+      var lastHero = hero.id;
+    }
+    var newHeroId = lastHero + 1;
+    this.newhero = { id: newHeroId, name: newItem }
+  }
+  // /CUSTOM CODE FOR OUTPUT TEST -----_
+
+
+
+  constructor() { }
+  ngOnInit() { }
+} // /HeroesComponent
