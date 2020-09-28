@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
-import { HEROES } from '../mock-heroes'; // sostituisce temporaneamente un database
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -11,7 +11,7 @@ import { HEROES } from '../mock-heroes'; // sostituisce temporaneamente un datab
 
 export class HeroesComponent implements OnInit { //implements OnInit è superfluo, se lo si elimina e si elimina anche constructor e ngOnInit la classe funziona ugualmente
 
-  heroes = HEROES;
+  heroes = Hero[];
   selectedHero: Hero;
 
   onSelect(hero: Hero): void { //You may commonly see :void as the return type of functions that do not return a value
@@ -29,8 +29,12 @@ export class HeroesComponent implements OnInit { //implements OnInit è superflu
   }
   // /CUSTOM CODE FOR OUTPUT TEST -----_
 
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 
-
-  constructor() { }
-  ngOnInit() { }
+  constructor(private heroService: HeroService) {}
+  ngOnInit() {
+    this.getHeroes();
+  }
 } // /HeroesComponent
