@@ -1,3 +1,4 @@
+
 <div *ngIf="hero" class="selectedhero">
   <h2>{{hero.name | uppercase}} Details</h2>
   <div>
@@ -9,13 +10,6 @@
       <input [(ngModel)]="hero.name" placeholder="name"/>
     </label>
   </div>
-
-  <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
-  <div>
-    <label>Add an item:
-      <input #newItem>
-    </label>
-    <button (click)="addNewItem(newItem.value)">Add to parent's list</button>
-  </div>
-  <!--   // CUSTOM CODE FOR OUTPUT TEST ---- -->
 </div>
+
+<button (click)="goBack()">go back</button>

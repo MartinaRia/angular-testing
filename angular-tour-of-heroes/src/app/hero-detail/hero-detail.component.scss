@@ -1,11 +1,36 @@
 .selectedhero{
+  width: 50%;
   background-color: #EEE;
   border-radius: 4px;
   padding: 15px 15px 30px 15px;
+  font-family: Cambria, Georgia;
+  margin: 20px 0px;
 
   input{
     border-radius: 4px;
     border: 2px solid grey;
     padding: 3px 0px 2.6px 6px;
   }
+}
+
+button {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+  margin-right: 5px;
+  border: 0px;
+  cursor: pointer;
+}
+button:visited{
+  color: #334953;
+}
+button:hover {
+  color: #039be5;
+  background-color: #cfd8dc;
+}
+button.active {
+  color: #039be5;
 }

@@ -55,11 +55,14 @@ body, input[type="text"], button {
   background-color: #DDD;
   left: .1em;
 }
-.heroes li.selected {
-  background-color: #CFD8DC;
-  color: white;
+.heroes a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
 }
-.heroes li.selected:hover {
+.heroes a:hover {
   background-color: #BBD8DC;
   color: white;
 }
